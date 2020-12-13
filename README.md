@@ -38,6 +38,18 @@ diesel_assignment
  Movies
  
  csv path > domain-implementation/src/main/resources/data/movies.csv
+
+ Links
+ 
+ csv path > domain-implementation/src/main/resources/data/links.csv
+ 
+ Ratings
+ 
+ csv path > domain-implementation/src/main/resources/data/ratings.csv
+ 
+ Tags
+ 
+ csv path > domain-implementation/src/main/resources/data/tags.csv
 ```
 
 ### Running the server
