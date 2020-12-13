@@ -32,23 +32,23 @@ diesel_assignment
 
 ###### Populate Data
 
-###### Tables
-
+###### Movies
 ```
- Movies
- 
  csv path > domain-implementation/src/main/resources/data/movies.csv
+```
 
- Links
- 
+###### Links
+```
  csv path > domain-implementation/src/main/resources/data/links.csv
- 
- Ratings
- 
+```
+
+###### Ratings
+``` 
  csv path > domain-implementation/src/main/resources/data/ratings.csv
- 
- Tags
- 
+``` 
+
+###### Tags
+``` 
  csv path > domain-implementation/src/main/resources/data/tags.csv
 ```
 
