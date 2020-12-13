@@ -18,6 +18,12 @@
 
 ### Flyway migration
 
+###### Database Name
+
+```
+diesel_assignment
+```
+
 ###### Run the migration and it should create the schema 
 
  ```

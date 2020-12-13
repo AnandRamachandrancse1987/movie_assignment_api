@@ -7,9 +7,6 @@ import com.db.service.MovieService
 
 import scala.concurrent.{ExecutionContext, Future}
 
-/**
-  * Created by victor.reventos on 6/5/17.
-  */
 @Singleton
 class DbMoviesService @Inject()(db: Database,
                                 @DbExecutionContext implicit val executionContext: ExecutionContext) extends MovieService with DbHelper {

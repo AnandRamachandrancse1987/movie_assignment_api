@@ -2,9 +2,6 @@ package com.db.service
 
 import scala.concurrent.Future
 
-/**
-  * Created by victor.reventos on 6/5/17.
-  */
 trait MovieService {
 
   def searchMovie(name: String): Future[Seq[(Int,String,String)]]
