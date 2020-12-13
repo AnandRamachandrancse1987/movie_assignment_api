@@ -30,6 +30,16 @@ diesel_assignment
  sbt flywayMigrate
  ```
 
+###### Populate Data
+
+###### Tables
+
+```
+ Movies
+ 
+ csv path > domain-implementation/src/main/resources/data/movies.csv
+```
+
 ### Running the server
 ```
  sbt run
