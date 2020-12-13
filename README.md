@@ -30,7 +30,7 @@ diesel_assignment
  sbt flywayMigrate
  ```
 
-###### Populate Data
+### Populate Data
 
 ###### Movies
 ```
