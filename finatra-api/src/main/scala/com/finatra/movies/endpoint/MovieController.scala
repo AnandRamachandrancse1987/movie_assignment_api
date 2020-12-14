@@ -15,10 +15,6 @@ import scala.concurrent.duration._
 
 class MovieController @Inject()(movieService: MovieService) extends Controller {
 
-  options("/api/:*") {
-    _: Request => response.ok
-  }
-
   get("/api/search/:query") { request: GetPostRequest =>
     Await.result(movieService.searchMovie(request.query),30.seconds).map {
       movie => {
