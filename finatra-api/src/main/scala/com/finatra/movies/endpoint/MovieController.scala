@@ -1,10 +1,9 @@
 package com.finatra.movies.endpoint
 
-import java.net.{URLDecoder, URLEncoder}
+import java.net.{URLDecoder}
 
 import com.db.service.MovieService
-import com.twitter.finagle.http.{Request, Status}
-import com.twitter.finagle.http.filter.Cors
+import com.twitter.finagle.http.{Status}
 import javax.inject.Inject
 import com.twitter.finatra.http.Controller
 import com.twitter.finatra.http.exceptions.HttpException
@@ -15,7 +14,7 @@ import scala.concurrent.duration._
 
 class MovieController @Inject()(movieService: MovieService) extends Controller {
 
-  get("/api/search/:query") { request: GetPostRequest =>
+  get("/api/movie/:query/search") { request: GetPostRequest =>
     Await.result(movieService.searchMovie(request.query),30.seconds).map {
       movie => {
         Movie(movie._1,movie._2,movie._3)
@@ -23,7 +22,7 @@ class MovieController @Inject()(movieService: MovieService) extends Controller {
     }
   }
 
-  get("/api/getMovie/:query") { request: GetPostRequest =>
+  get("/api/movie/:query") { request: GetPostRequest =>
 
     val keyword = URLDecoder.decode(request.query, "UTF-8")
     val movie:Option[(Int,String,String)] = Await.result(movieService.fetchMovieByName(keyword),30.seconds).headOption
